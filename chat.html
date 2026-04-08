@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | SkillBarter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { overflow: hidden; } /* Prevents whole page scroll to keep chat app-like */
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container" style="max-width: 100%; padding: 0 2rem;">
+            <a href="index.html" class="logo">SkillBarter</a>
+            <div class="nav-links">
+                <a href="dashboard.html">Find Matches</a>
+                <a href="chat.html" style="font-weight: 600; color: var(--text-main);">Messages (1)</a>
+                <a href="profile.html">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="chat-layout">
+        <aside class="chat-sidebar">
+            <h3 style="margin-bottom: 1rem; padding-left: 0.5rem;">Conversations</h3>
+            
+            <div class="chat-user active">
+                <div class="avatar" style="background-color: var(--primary); color: white;">SM</div>
+                <div>
+                    <h4 style="margin: 0; font-size: 1rem;">Sarah M.</h4>
+                    <p style="margin: 0; font-size: 0.875rem; color: var(--text-muted);">Sure, that works for me!</p>
+                </div>
+            </div>
+
+            <div class="chat-user">
+                <div class="avatar">RP</div>
+                <div>
+                    <h4 style="margin: 0; font-size: 1rem;">Raj P.</h4>
+                    <p style="margin: 0; font-size: 0.875rem; color: var(--text-muted);">Let's connect soon.</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-main">
+            <header class="chat-header">
+                <div class="avatar" style="width: 40px; height: 40px; background-color: var(--primary); color: white;">SM</div>
+                <div>
+                    <h3 style="margin: 0;">Sarah M.</h3>
+                    <p style="margin: 0; font-size: 0.875rem;">Exchanging UI Design for Java</p>
+                </div>
+            </header>
+
+            <div class="chat-messages">
+                <div style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Connection accepted. You can now chat privately.
+                </div>
+
+                <div class="message received">
+                    Hi Alex! I saw your profile. I really need help setting up a Spring Boot backend, and I can definitely help you design your UI.
+                </div>
+
+                <div class="message sent">
+                    Hey Sarah! That sounds perfect. I already have a basic schema in mind, but the frontend looks terrible right now 😅
+                </div>
+
+                <div class="message received">
+                    No worries, that's what I'm here for! Do you want to meet up at a cafe this weekend or just do a Google Meet?
+                </div>
+
+                <div class="message sent">
+                    Google Meet works best for me to start. How about Saturday at 11 AM?
+                </div>
+
+                <div class="message received">
+                    Sure, that works for me!
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" class="form-control" placeholder="Type a message...">
+                <button class="btn btn-primary">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

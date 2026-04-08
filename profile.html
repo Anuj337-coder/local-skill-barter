@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up Profile | SkillBarter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .profile-container { max-width: 600px; margin: 3rem auto; }
+        .section-title { margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SkillBarter</a>
+            <div class="nav-links">
+                <a href="dashboard.html">Find Matches</a>
+                <a href="profile.html" style="font-weight: 600; color: var(--text-main);">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container profile-container">
+        <div class="card">
+            <h2 class="section-title">Edit Your Profile</h2>
+            <form action="dashboard.html">
+                
+                <div class="form-group">
+                    <label class="form-label">Full Name or Nickname</label>
+                    <input type="text" class="form-control" placeholder="E.g. Alex" value="Alex" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Short Bio (Keep it minimal)</label>
+                    <input type="text" class="form-control" placeholder="I love building things." value="Software developer looking to learn design.">
+                </div>
+
+                <h3 class="section-title" style="margin-top: 2rem;">Skill Exchange</h3>
+
+                <div class="form-group">
+                    <label class="form-label">Skills I Offer (comma-separated)</label>
+                    <input type="text" class="form-control" placeholder="Java, Spring Boot, SQL" value="Java, ReactJS, Backend">
+                    <div class="tags" style="margin-top: 0.5rem;">
+                        <span class="tag offer">Java</span>
+                        <span class="tag offer">ReactJS</span>
+                        <span class="tag offer">Backend</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Skills I Want (comma-separated)</label>
+                    <input type="text" class="form-control" placeholder="UI/UX, Video Editing, Spanish" value="UI Design, Video Editing">
+                    <div class="tags" style="margin-top: 0.5rem;">
+                        <span class="tag want">UI Design</span>
+                        <span class="tag want">Video Editing</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title" style="margin-top: 2rem;">Location & Privacy</h3>
+
+                <div class="grid grid-cols-2">
+                    <div class="form-group">
+                        <label class="form-label">General Area / City</label>
+                        <input type="text" class="form-control" placeholder="E.g. Pune" value="Pune, India">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Match Radius (km)</label>
+                        <input type="number" class="form-control" placeholder="5" value="5">
+                    </div>
+                </div>
+                
+                <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    * We only show approximate distance to matches. Your exact address is never shared.
+                </p>
+
+                <button type="submit" class="btn btn-primary btn-block">Save to Dashboard</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

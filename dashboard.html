@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SkillBarter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+        .user-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .user-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SkillBarter</a>
+            <div class="nav-links">
+                <a href="dashboard.html" style="font-weight: 600; color: var(--text-main);">Find Matches</a>
+                <a href="chat.html">Messages (1)</a>
+                <a href="profile.html">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="filter-bar">
+            <div>
+                <span style="font-weight: 600; color: var(--text-main);">Matches within 5 km</span>
+                <span style="color: var(--text-muted); margin-left: 0.5rem; font-size: 0.875rem;">(Based on your wanted skills)</span>
+            </div>
+            <div>
+                <a href="profile.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Edit Preferences</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3" style="margin-bottom: 4rem;">
+            
+            <!-- Match 1 -->
+            <div class="card user-card">
+                <div>
+                    <div class="user-card-header">
+                        <div>
+                            <h3 style="margin-bottom: 0;">Sarah M.</h3>
+                            <span style="font-size: 0.875rem; color: var(--text-muted);">2.1 km away</span>
+                        </div>
+                        <div class="avatar" style="width: 40px; height: 40px;">SM</div>
+                    </div>
+                    
+                    <p style="font-size: 0.875rem;">"Graphic designer wanting to learn backend tech."</p>
+
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Offers:</div>
+                        <div class="tags">
+                            <span class="tag offer">UI Design</span>
+                            <span class="tag offer">Figma</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Wants:</div>
+                        <div class="tags">
+                            <span class="tag want">Java</span>
+                            <span class="tag want">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="chat.html" class="btn btn-primary btn-block" style="margin-top: 1rem;">Connect & Chat</a>
+            </div>
+
+            <!-- Match 2 -->
+            <div class="card user-card">
+                <div>
+                    <div class="user-card-header">
+                        <div>
+                            <h3 style="margin-bottom: 0;">Raj P.</h3>
+                            <span style="font-size: 0.875rem; color: var(--text-muted);">3.4 km away</span>
+                        </div>
+                        <div class="avatar" style="width: 40px; height: 40px;">RP</div>
+                    </div>
+                    
+                    <p style="font-size: 0.875rem;">"Vlogger looking for help with portfolio site."</p>
+
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Offers:</div>
+                        <div class="tags">
+                            <span class="tag offer">Video Editing</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Wants:</div>
+                        <div class="tags">
+                            <span class="tag want">ReactJS</span>
+                            <span class="tag want">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="chat.html" class="btn btn-primary btn-block" style="margin-top: 1rem;">Connect & Chat</a>
+            </div>
+
+            <!-- Match 3 -->
+            <div class="card user-card">
+                <div>
+                    <div class="user-card-header">
+                        <div>
+                            <h3 style="margin-bottom: 0;">Emily T.</h3>
+                            <span style="font-size: 0.875rem; color: var(--text-muted);">4.8 km away</span>
+                        </div>
+                        <div class="avatar" style="width: 40px; height: 40px;">ET</div>
+                    </div>
+                    
+                    <p style="font-size: 0.875rem;">"UX student needing help with data structures."</p>
+
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Offers:</div>
+                        <div class="tags">
+                            <span class="tag offer">UX Writing</span>
+                            <span class="tag offer">Wireframing</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;">Wants:</div>
+                        <div class="tags">
+                            <span class="tag want">Java</span>
+                            <span class="tag want">Mentorship</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-outline btn-block" style="margin-top: 1rem;">Request Sent</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
