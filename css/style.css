@@ -1,16 +1,16 @@
 :root {
-  --primary: #4F46E5;
-  --primary-hover: #4338CA;
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
   --secondary: #10B981;
-  --bg-main: #F9FAFB;
+  --bg-main: #F3F4F6;
   --bg-card: #FFFFFF;
   --text-main: #111827;
   --text-muted: #6B7280;
   --border: #E5E7EB;
   --radius: 12px;
   --radius-sm: 8px;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -21,10 +21,11 @@
 }
 
 body {
-  background-color: var(--bg-main);
+  background: linear-gradient(135deg, #F8FAFC, #EEF2FF);
+  background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
-  font-family: var(--font-family);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -112,14 +113,16 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), #8B5CF6);
   color: white;
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-hover);
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
   color: white;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
 }
 
 .btn-outline {
@@ -138,17 +141,18 @@ p {
 
 /* Cards */
 .card {
-  background-color: var(--bg-card);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   padding: 1.5rem;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover {
   box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* Forms */
@@ -374,4 +378,36 @@ p {
   .chat-sidebar {
     display: none; /* simple toggle later */
   }
+}
+
+/* Icon Link & Badge */
+.icon-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-link:hover, .icon-link.active {
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #EF4444;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
 }
